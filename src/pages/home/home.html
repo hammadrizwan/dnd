@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  
+    <ion-buttons end>
+      <button ion-button icon-only (click)='toggleSearch()'>
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)='choosePosition()'>
+        <ion-icon name="ios-locate-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<div class="switch">
+  <button ion-button color="light" (click)="(switch = 'map'); resizeMap()" [class.active]="(switch == 'map')" icon-only><ion-icon name="map"></ion-icon></button>
+</div>
+
+
+
+<ion-content>
+  
+  <div class="map">
+      
+      <ion-searchbar #searchbar1 placeholder="Enter Location:"></ion-searchbar>
+    <ion-item></ion-item>
+      <ion-searchbar #searchbar placeholder="Enter Destination:"></ion-searchbar>
+    <div id="map" #map></div>
+  </div>
+</ion-content>
